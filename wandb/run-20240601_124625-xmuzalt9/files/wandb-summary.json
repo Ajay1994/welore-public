@@ -1,1 +1,0 @@
-{"Dense_PPL": 7.03898811340332, "_timestamp": 1717265206.7330701, "_runtime": 1221.0058600902557, "_step": 3, "Compressed_PPL": 7.124347686767578, "Reduction_Ratio": 9.818594796316964, "Effective_weight_compression": 144.63734734405554, "_wandb": {"runtime": 1220}}
