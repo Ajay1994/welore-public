@@ -1,0 +1,71 @@
+[32m2024-06-01 14:13:55.908[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m142[39m - [1mGlobal rank 0,  device: 0
+[32m2024-06-01 14:13:55.909[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m144[39m - [1m****************************************
+[32m2024-06-01 14:13:55.909[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m145[39m - [1mStarting training with the arguments
+[32m2024-06-01 14:13:55.909[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmodel_config                   meta-llama/Llama-2-7b-hf
+[32m2024-06-01 14:13:55.910[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1muse_hf_model                   False
+[32m2024-06-01 14:13:55.910[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mcontinue_from                  None
+[32m2024-06-01 14:13:55.910[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mbatch_size                     8
+[32m2024-06-01 14:13:55.910[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mgradient_accumulation          1
+[32m2024-06-01 14:13:55.911[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mtotal_batch_size               8
+[32m2024-06-01 14:13:55.911[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmax_length                     512
+[32m2024-06-01 14:13:55.911[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1moptimizer                      adamw
+[32m2024-06-01 14:13:55.911[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mlr                             0.0001
+[32m2024-06-01 14:13:55.911[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mscheduler                      cosine
+[32m2024-06-01 14:13:55.912[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmin_lr_ratio                   0.1
+[32m2024-06-01 14:13:55.912[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mactivation_checkpointing       False
+[32m2024-06-01 14:13:55.912[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mweight_decay                   0.0
+[32m2024-06-01 14:13:55.912[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mwarmup_steps                   1000
+[32m2024-06-01 14:13:55.912[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1meval_every                     5000
+[32m2024-06-01 14:13:55.913[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mnum_training_steps             1000
+[32m2024-06-01 14:13:55.913[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmax_train_tokens               None
+[32m2024-06-01 14:13:55.913[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1msave_every                     10000
+[32m2024-06-01 14:13:55.913[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1msave_dir                       /data/ajay_data/adaptive_rank_data/downstream
+[32m2024-06-01 14:13:55.913[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mtags                           None
+[32m2024-06-01 14:13:55.914[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdtype                          bfloat16
+[32m2024-06-01 14:13:55.914[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mworkers                        8
+[32m2024-06-01 14:13:55.914[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mseed                           99
+[32m2024-06-01 14:13:55.914[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mproject                        adaptive-low-rank
+[32m2024-06-01 14:13:55.915[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mname                           low-rank-downstream-test
+[32m2024-06-01 14:13:55.915[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1munset_wandb                    False
+[32m2024-06-01 14:13:55.915[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1munset_save                     False
+[32m2024-06-01 14:13:55.915[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mgrad_clipping                  0.0
+[32m2024-06-01 14:13:55.915[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mbeta1                          0.0
+[32m2024-06-01 14:13:55.916[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mrank                           128
+[32m2024-06-01 14:13:55.916[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mupdate_proj_gap                50
+[32m2024-06-01 14:13:55.916[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mgalore_scale                   1.0
+[32m2024-06-01 14:13:55.916[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mproj_type                      std
+[32m2024-06-01 14:13:55.916[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mproj_bits                      8
+[32m2024-06-01 14:13:55.917[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mproj_quant                     False
+[32m2024-06-01 14:13:55.917[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mproj_group_size                128
+[32m2024-06-01 14:13:55.917[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1msingle_gpu                     False
+[32m2024-06-01 14:13:55.917[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mlocal_rank                     0
+[32m2024-06-01 14:13:55.917[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdataset                        strategyqa
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmax_num_worker                 3
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmax_length_direct              32
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdo_eval                        True
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdo_lora                        False
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmodel_rank                     50
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mmin_ratio                      0.4999
+[32m2024-06-01 14:13:55.918[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1msingular_value_path            ./data/singular_values_llama-2-7b-base.pt
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mpath_rank_k_checkpoint         /data/ajay_data/adaptive_rank_data/finetune_adaptive/welore-single-gpu-rank50/model_checkpoint.pt
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mrank_thresold                  0.178
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mlora_rank                      4
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mlora_alpha                     4
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdataset_path                   ./data/StrategyQA/task.json
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdirect_answer_trigger          
+[1mTherefore, the answer is
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdirect_answer_trigger_for_zeroshot The answer is
+[32m2024-06-01 14:13:55.919[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdirect_answer_trigger_for_zeroshot_cot 
+[1mTherefore, the answer is
+[32m2024-06-01 14:13:55.920[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m147[39m - [1mdirect_answer_trigger_for_fewshot The answer is
+[32m2024-06-01 14:13:55.920[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m148[39m - [1m****************************************
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 609/609 [00:00<00:00, 48.0kB/s]
+/home/aj32632/anaconda3/envs/mci/lib/python3.9/site-packages/transformers/modeling_utils.py:2193: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+model.safetensors.index.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 26.8k/26.8k [00:00<00:00, 2.37MB/s]
+Downloading shards:   0%|                                                                                                                                                                               | 0/2 [00:00<?, ?it/s]
+
+
+
+
+

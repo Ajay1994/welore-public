@@ -1,0 +1,1728 @@
+[32m2024-06-01 13:46:36.991[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m178[39m - [1m****************************************
+[32m2024-06-01 13:46:36.992[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m179[39m - [1mStarting training with the arguments
+[32m2024-06-01 13:46:36.992[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmodel_config                   meta-llama/Llama-2-7b-hf
+[32m2024-06-01 13:46:36.993[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1muse_hf_model                   False
+[32m2024-06-01 13:46:36.993[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mcontinue_from                  None
+[32m2024-06-01 13:46:36.993[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mbatch_size                     1
+[32m2024-06-01 13:46:36.993[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mgradient_accumulation          1
+[32m2024-06-01 13:46:36.993[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mtotal_batch_size               1
+[32m2024-06-01 13:46:36.994[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmax_length                     1024
+[32m2024-06-01 13:46:36.994[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1moptimizer                      adamw
+[32m2024-06-01 13:46:36.994[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mlr                             5e-05
+[32m2024-06-01 13:46:36.994[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mscheduler                      cosine
+[32m2024-06-01 13:46:36.994[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmin_lr_ratio                   0.1
+[32m2024-06-01 13:46:36.995[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mactivation_checkpointing       False
+[32m2024-06-01 13:46:36.995[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mweight_decay                   0.0
+[32m2024-06-01 13:46:36.995[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mwarmup_steps                   500
+[32m2024-06-01 13:46:36.995[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1meval_every                     20000
+[32m2024-06-01 13:46:36.995[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mnum_training_steps             10000
+[32m2024-06-01 13:46:36.996[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmax_train_tokens               None
+[32m2024-06-01 13:46:36.996[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1msave_every                     200
+[32m2024-06-01 13:46:36.996[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1msave_dir                       /data/ajay_data/adaptive_rank_data/finetune_adaptive
+[32m2024-06-01 13:46:36.996[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mtags                           None
+[32m2024-06-01 13:46:36.996[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mdtype                          bfloat16
+[32m2024-06-01 13:46:36.997[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mworkers                        8
+[32m2024-06-01 13:46:36.997[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mseed                           0
+[32m2024-06-01 13:46:36.997[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mproject                        camera-ready-project
+[32m2024-06-01 13:46:36.997[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mname                           low-rank-continual-finetune-test
+[32m2024-06-01 13:46:36.997[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1munset_wandb                    False
+[32m2024-06-01 13:46:36.998[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1munset_save                     False
+[32m2024-06-01 13:46:36.998[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mgrad_clipping                  1.0
+[32m2024-06-01 13:46:36.998[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mbeta1                          0.0
+[32m2024-06-01 13:46:36.998[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mrank                           128
+[32m2024-06-01 13:46:36.998[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mupdate_proj_gap                50
+[32m2024-06-01 13:46:36.999[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mgalore_scale                   1.0
+[32m2024-06-01 13:46:36.999[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mproj_type                      std
+[32m2024-06-01 13:46:36.999[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mproj_bits                      8
+[32m2024-06-01 13:46:36.999[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mproj_quant                     False
+[32m2024-06-01 13:46:36.999[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mproj_group_size                128
+[32m2024-06-01 13:46:37.000[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1msingle_gpu                     False
+[32m2024-06-01 13:46:37.000[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1msingular_value_path            ./data/singular_values_llama-2-7b-base.pt
+[32m2024-06-01 13:46:37.000[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmodel_rank                     50
+[32m2024-06-01 13:46:37.000[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mmin_ratio                      0.4999
+[32m2024-06-01 13:46:37.000[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mlocal_rank                     0
+[32m2024-06-01 13:46:37.001[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1munset_welore_pos               False
+[32m2024-06-01 13:46:37.001[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m181[39m - [1mrank_thresold                  0.175
+[32m2024-06-01 13:46:37.001[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m182[39m - [1m****************************************
+/home/aj32632/anaconda3/envs/mci/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1714: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/home/aj32632/anaconda3/envs/mci/lib/python3.9/site-packages/transformers/modeling_utils.py:2193: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+
+Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:05<00:00,  2.54s/it]
+[32m2024-06-01 13:46:44.033[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m216[39m - [1m------------------- Dense Model Loaded --------------------
+[32m2024-06-01 13:46:44.035[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m221[39m - [1mTotal params BEFORE Rank Reduction: 6738.42M
+[32m2024-06-01 13:46:44.036[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m222[39m - [1mTrainable params BEFORE Rank Reduction: 6476.27M
+[32m2024-06-01 13:46:44.037[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl[39m:[36m23[39m - [1mEvaluating on c4 .....
+[32m2024-06-01 13:46:45.670[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 0/149
+[32m2024-06-01 13:47:14.985[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 20/149
+[32m2024-06-01 13:47:44.425[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 40/149
+[32m2024-06-01 13:48:13.964[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 60/149
+[32m2024-06-01 13:48:43.555[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 80/149
+[32m2024-06-01 13:49:13.159[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 100/149
+[32m2024-06-01 13:49:42.769[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 120/149
+[32m2024-06-01 13:50:12.410[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 140/149
+[32m2024-06-01 13:50:25.241[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m225[39m - [1mBefore Rank Reduction PPL on C4: 7.03898811340332
+[32m2024-06-01 13:50:25.241[39m | [1mINFO    [22m | [36mutils[39m:[36madaptive_rank_pruning[39m:[36m122[39m - [1mUsing the mean threolding
+[1msum(_data < args.rank_thresold = 0.175)
+[32m2024-06-01 13:50:25.447[39m | [1mINFO    [22m | [36mutils[39m:[36madaptive_rank_pruning[39m:[36m135[39m - [1mAttempted Rank Reduction: 60.529 %
+[32m2024-06-01 13:50:25.447[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m43[39m - [1m*************** Pruning Model Started ***************
+[32m2024-06-01 13:50:28.835[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.0.self_attn.q_proj                                   Desired/Total: 39/4096 (0.952148 %)
+[32m2024-06-01 13:50:31.987[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.0.self_attn.k_proj                                   Desired/Total: 61/4096 (1.489258 %)
+[32m2024-06-01 13:50:34.896[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.0.self_attn.v_proj                                   Desired/Total: 897/4096 (21.899414 %)
+[32m2024-06-01 13:50:37.749[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.0.self_attn.o_proj                                   Desired/Total: 346/4096 (8.447266 %)
+[32m2024-06-01 13:50:40.568[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.0.mlp.gate_proj                                      Desired/Total: 593/4096  (14.477539 %)
+[32m2024-06-01 13:50:43.378[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.0.mlp.up_proj                                        Desired/Total: 871/4096  (21.264648 %)
+[32m2024-06-01 13:50:46.181[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.0.mlp.down_proj                                      Desired/Total: 1327/4096  (32.397461 %)
+[32m2024-06-01 13:50:49.452[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.1.self_attn.q_proj                                   Desired/Total: 271/4096 (6.616211 %)
+[32m2024-06-01 13:50:52.552[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.1.self_attn.k_proj                                   Desired/Total: 244/4096 (5.957031 %)
+[32m2024-06-01 13:50:55.375[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.1.self_attn.v_proj                                   Desired/Total: 1323/4096 (32.299805 %)
+[32m2024-06-01 13:50:58.103[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.1.self_attn.o_proj                                   Desired/Total: 869/4096 (21.215820 %)
+[32m2024-06-01 13:51:00.902[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.1.mlp.gate_proj                                      Desired/Total: 505/4096  (12.329102 %)
+[32m2024-06-01 13:51:00.902[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.1.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:00.902[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.1.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:04.006[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.2.self_attn.q_proj                                   Desired/Total: 405/4096 (9.887695 %)
+[32m2024-06-01 13:51:07.113[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.2.self_attn.k_proj                                   Desired/Total: 327/4096 (7.983398 %)
+[32m2024-06-01 13:51:07.113[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.2.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:51:09.943[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.2.self_attn.o_proj                                   Desired/Total: 1096/4096 (26.757812 %)
+[32m2024-06-01 13:51:12.815[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.2.mlp.gate_proj                                      Desired/Total: 1276/4096  (31.152344 %)
+[32m2024-06-01 13:51:12.816[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.2.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:12.816[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.2.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:15.798[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.3.self_attn.q_proj                                   Desired/Total: 551/4096 (13.452148 %)
+[32m2024-06-01 13:51:18.624[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.3.self_attn.k_proj                                   Desired/Total: 473/4096 (11.547852 %)
+[32m2024-06-01 13:51:18.624[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.3.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:51:21.412[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.3.self_attn.o_proj                                   Desired/Total: 852/4096 (20.800781 %)
+[32m2024-06-01 13:51:24.313[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.3.mlp.gate_proj                                      Desired/Total: 1703/4096  (41.577148 %)
+[32m2024-06-01 13:51:24.314[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.3.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:24.314[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.3.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:27.347[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.4.self_attn.q_proj                                   Desired/Total: 542/4096 (13.232422 %)
+[32m2024-06-01 13:51:30.176[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.4.self_attn.k_proj                                   Desired/Total: 441/4096 (10.766602 %)
+[32m2024-06-01 13:51:30.176[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.4.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:51:33.028[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.4.self_attn.o_proj                                   Desired/Total: 1153/4096 (28.149414 %)
+[32m2024-06-01 13:51:35.908[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.4.mlp.gate_proj                                      Desired/Total: 1457/4096  (35.571289 %)
+[32m2024-06-01 13:51:35.909[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.4.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:35.909[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.4.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:38.835[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.5.self_attn.q_proj                                   Desired/Total: 558/4096 (13.623047 %)
+[32m2024-06-01 13:51:41.692[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.5.self_attn.k_proj                                   Desired/Total: 412/4096 (10.058594 %)
+[32m2024-06-01 13:51:41.692[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.5.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:51:44.543[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.5.self_attn.o_proj                                   Desired/Total: 1257/4096 (30.688477 %)
+[32m2024-06-01 13:51:47.346[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.5.mlp.gate_proj                                      Desired/Total: 929/4096  (22.680664 %)
+[32m2024-06-01 13:51:47.347[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.5.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:47.347[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.5.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:50.299[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.6.self_attn.q_proj                                   Desired/Total: 582/4096 (14.208984 %)
+[32m2024-06-01 13:51:53.073[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.6.self_attn.k_proj                                   Desired/Total: 436/4096 (10.644531 %)
+[32m2024-06-01 13:51:53.073[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.6.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:51:55.899[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.6.self_attn.o_proj                                   Desired/Total: 1031/4096 (25.170898 %)
+[32m2024-06-01 13:51:58.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.6.mlp.gate_proj                                      Desired/Total: 620/4096  (15.136719 %)
+[32m2024-06-01 13:51:58.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.6.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:51:58.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.6.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:01.682[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.7.self_attn.q_proj                                   Desired/Total: 657/4096 (16.040039 %)
+[32m2024-06-01 13:52:04.538[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.7.self_attn.k_proj                                   Desired/Total: 492/4096 (12.011719 %)
+[32m2024-06-01 13:52:04.538[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.7.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:52:07.364[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.7.self_attn.o_proj                                   Desired/Total: 1188/4096 (29.003906 %)
+[32m2024-06-01 13:52:10.151[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.7.mlp.gate_proj                                      Desired/Total: 605/4096  (14.770508 %)
+[32m2024-06-01 13:52:10.151[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.7.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:10.152[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.7.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:13.067[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.8.self_attn.q_proj                                   Desired/Total: 670/4096 (16.357422 %)
+[32m2024-06-01 13:52:15.813[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.8.self_attn.k_proj                                   Desired/Total: 497/4096 (12.133789 %)
+[32m2024-06-01 13:52:15.814[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.8.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:52:18.622[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.8.self_attn.o_proj                                   Desired/Total: 1422/4096 (34.716797 %)
+[32m2024-06-01 13:52:21.474[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.8.mlp.gate_proj                                      Desired/Total: 745/4096  (18.188477 %)
+[32m2024-06-01 13:52:21.475[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.8.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:21.475[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.8.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:24.395[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.9.self_attn.q_proj                                   Desired/Total: 674/4096 (16.455078 %)
+[32m2024-06-01 13:52:27.228[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.9.self_attn.k_proj                                   Desired/Total: 516/4096 (12.597656 %)
+[32m2024-06-01 13:52:27.229[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.9.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:52:30.101[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.9.self_attn.o_proj                                   Desired/Total: 1380/4096 (33.691406 %)
+[32m2024-06-01 13:52:32.916[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.9.mlp.gate_proj                                      Desired/Total: 711/4096  (17.358398 %)
+[32m2024-06-01 13:52:32.917[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.9.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:32.917[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.9.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:35.910[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.10.self_attn.q_proj                                   Desired/Total: 650/4096 (15.869141 %)
+[32m2024-06-01 13:52:38.792[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.10.self_attn.k_proj                                   Desired/Total: 491/4096 (11.987305 %)
+[32m2024-06-01 13:52:38.793[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.10.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:52:41.652[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.10.self_attn.o_proj                                   Desired/Total: 1632/4096 (39.843750 %)
+[32m2024-06-01 13:52:44.449[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.10.mlp.gate_proj                                      Desired/Total: 699/4096  (17.065430 %)
+[32m2024-06-01 13:52:44.449[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.10.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:44.450[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.10.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:47.365[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.11.self_attn.q_proj                                   Desired/Total: 648/4096 (15.820312 %)
+[32m2024-06-01 13:52:50.135[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.11.self_attn.k_proj                                   Desired/Total: 495/4096 (12.084961 %)
+[32m2024-06-01 13:52:50.135[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.11.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:52:52.973[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.11.self_attn.o_proj                                   Desired/Total: 1176/4096 (28.710938 %)
+[32m2024-06-01 13:52:55.761[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.11.mlp.gate_proj                                      Desired/Total: 630/4096  (15.380859 %)
+[32m2024-06-01 13:52:55.761[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.11.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:52:58.648[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.11.mlp.down_proj                                      Desired/Total: 2026/4096  (49.462891 %)
+[32m2024-06-01 13:53:01.547[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.12.self_attn.q_proj                                   Desired/Total: 669/4096 (16.333008 %)
+[32m2024-06-01 13:53:04.418[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.12.self_attn.k_proj                                   Desired/Total: 509/4096 (12.426758 %)
+[32m2024-06-01 13:53:04.419[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.12.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:53:07.296[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.12.self_attn.o_proj                                   Desired/Total: 1487/4096 (36.303711 %)
+[32m2024-06-01 13:53:10.119[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.12.mlp.gate_proj                                      Desired/Total: 726/4096  (17.724609 %)
+[32m2024-06-01 13:53:10.119[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.12.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:10.119[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.12.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:13.028[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.13.self_attn.q_proj                                   Desired/Total: 630/4096 (15.380859 %)
+[32m2024-06-01 13:53:15.799[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.13.self_attn.k_proj                                   Desired/Total: 484/4096 (11.816406 %)
+[32m2024-06-01 13:53:15.799[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.13.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:53:18.626[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.13.self_attn.o_proj                                   Desired/Total: 1468/4096 (35.839844 %)
+[32m2024-06-01 13:53:21.429[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.13.mlp.gate_proj                                      Desired/Total: 697/4096  (17.016602 %)
+[32m2024-06-01 13:53:21.429[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.13.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:21.429[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.13.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:24.294[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.14.self_attn.q_proj                                   Desired/Total: 621/4096 (15.161133 %)
+[32m2024-06-01 13:53:27.094[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.14.self_attn.k_proj                                   Desired/Total: 439/4096 (10.717773 %)
+[32m2024-06-01 13:53:27.095[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.14.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:53:29.914[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.14.self_attn.o_proj                                   Desired/Total: 1654/4096 (40.380859 %)
+[32m2024-06-01 13:53:32.750[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.14.mlp.gate_proj                                      Desired/Total: 714/4096  (17.431641 %)
+[32m2024-06-01 13:53:32.750[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.14.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:32.751[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.14.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:35.694[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.15.self_attn.q_proj                                   Desired/Total: 533/4096 (13.012695 %)
+[32m2024-06-01 13:53:38.459[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.15.self_attn.k_proj                                   Desired/Total: 406/4096 (9.912109 %)
+[32m2024-06-01 13:53:38.460[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.15.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:53:41.314[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.15.self_attn.o_proj                                   Desired/Total: 1762/4096 (43.017578 %)
+[32m2024-06-01 13:53:44.107[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.15.mlp.gate_proj                                      Desired/Total: 746/4096  (18.212891 %)
+[32m2024-06-01 13:53:44.107[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.15.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:44.107[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.15.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:47.024[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.16.self_attn.q_proj                                   Desired/Total: 486/4096 (11.865234 %)
+[32m2024-06-01 13:53:49.788[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.16.self_attn.k_proj                                   Desired/Total: 362/4096 (8.837891 %)
+[32m2024-06-01 13:53:49.789[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.16.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:53:52.620[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.16.self_attn.o_proj                                   Desired/Total: 1782/4096 (43.505859 %)
+[32m2024-06-01 13:53:55.387[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.16.mlp.gate_proj                                      Desired/Total: 703/4096  (17.163086 %)
+[32m2024-06-01 13:53:55.388[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.16.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:55.388[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.16.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:53:58.276[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.17.self_attn.q_proj                                   Desired/Total: 501/4096 (12.231445 %)
+[32m2024-06-01 13:54:01.035[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.17.self_attn.k_proj                                   Desired/Total: 367/4096 (8.959961 %)
+[32m2024-06-01 13:54:01.036[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.17.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:54:03.823[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.17.self_attn.o_proj                                   Desired/Total: 1659/4096 (40.502930 %)
+[32m2024-06-01 13:54:06.595[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.17.mlp.gate_proj                                      Desired/Total: 652/4096  (15.917969 %)
+[32m2024-06-01 13:54:06.596[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.17.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:06.596[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.17.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:09.449[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.18.self_attn.q_proj                                   Desired/Total: 472/4096 (11.523438 %)
+[32m2024-06-01 13:54:12.188[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.18.self_attn.k_proj                                   Desired/Total: 370/4096 (9.033203 %)
+[32m2024-06-01 13:54:12.188[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.18.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:54:15.021[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.18.self_attn.o_proj                                   Desired/Total: 1784/4096 (43.554688 %)
+[32m2024-06-01 13:54:17.800[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.18.mlp.gate_proj                                      Desired/Total: 792/4096  (19.335938 %)
+[32m2024-06-01 13:54:17.801[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.18.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:17.801[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.18.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:20.691[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.19.self_attn.q_proj                                   Desired/Total: 457/4096 (11.157227 %)
+[32m2024-06-01 13:54:23.408[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.19.self_attn.k_proj                                   Desired/Total: 329/4096 (8.032227 %)
+[32m2024-06-01 13:54:23.409[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.19.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:54:26.222[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.19.self_attn.o_proj                                   Desired/Total: 1827/4096 (44.604492 %)
+[32m2024-06-01 13:54:29.068[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.19.mlp.gate_proj                                      Desired/Total: 1000/4096  (24.414062 %)
+[32m2024-06-01 13:54:29.068[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.19.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:29.068[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.19.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:31.982[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.20.self_attn.q_proj                                   Desired/Total: 403/4096 (9.838867 %)
+[32m2024-06-01 13:54:34.750[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.20.self_attn.k_proj                                   Desired/Total: 332/4096 (8.105469 %)
+[32m2024-06-01 13:54:34.750[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.20.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:54:37.542[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.20.self_attn.o_proj                                   Desired/Total: 1480/4096 (36.132812 %)
+[32m2024-06-01 13:54:40.370[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.20.mlp.gate_proj                                      Desired/Total: 1026/4096  (25.048828 %)
+[32m2024-06-01 13:54:40.371[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.20.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:40.371[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.20.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:43.265[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.21.self_attn.q_proj                                   Desired/Total: 437/4096 (10.668945 %)
+[32m2024-06-01 13:54:46.011[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.21.self_attn.k_proj                                   Desired/Total: 394/4096 (9.619141 %)
+[32m2024-06-01 13:54:46.012[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.21.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:54:48.810[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.21.self_attn.o_proj                                   Desired/Total: 1879/4096 (45.874023 %)
+[32m2024-06-01 13:54:51.666[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.21.mlp.gate_proj                                      Desired/Total: 1190/4096  (29.052734 %)
+[32m2024-06-01 13:54:51.667[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.21.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:51.667[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.21.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:54:54.598[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.22.self_attn.q_proj                                   Desired/Total: 456/4096 (11.132812 %)
+[32m2024-06-01 13:54:57.357[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.22.self_attn.k_proj                                   Desired/Total: 429/4096 (10.473633 %)
+[32m2024-06-01 13:54:57.357[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.22.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:00.120[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.22.self_attn.o_proj                                   Desired/Total: 1205/4096 (29.418945 %)
+[32m2024-06-01 13:55:02.957[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.22.mlp.gate_proj                                      Desired/Total: 1239/4096  (30.249023 %)
+[32m2024-06-01 13:55:02.958[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.22.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:02.958[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.22.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:05.906[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.23.self_attn.q_proj                                   Desired/Total: 539/4096 (13.159180 %)
+[32m2024-06-01 13:55:08.636[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.23.self_attn.k_proj                                   Desired/Total: 499/4096 (12.182617 %)
+[32m2024-06-01 13:55:08.636[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.23.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:11.454[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.23.self_attn.o_proj                                   Desired/Total: 2005/4096 (48.950195 %)
+[32m2024-06-01 13:55:14.358[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.23.mlp.gate_proj                                      Desired/Total: 1558/4096  (38.037109 %)
+[32m2024-06-01 13:55:14.358[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.23.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:14.358[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.23.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:17.311[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.24.self_attn.q_proj                                   Desired/Total: 465/4096 (11.352539 %)
+[32m2024-06-01 13:55:20.076[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.24.self_attn.k_proj                                   Desired/Total: 383/4096 (9.350586 %)
+[32m2024-06-01 13:55:20.077[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.24.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:22.837[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.24.self_attn.o_proj                                   Desired/Total: 1596/4096 (38.964844 %)
+[32m2024-06-01 13:55:25.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.24.mlp.gate_proj                                      Desired/Total: 1596/4096  (38.964844 %)
+[32m2024-06-01 13:55:25.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.24.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:25.723[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.24.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:28.614[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.25.self_attn.q_proj                                   Desired/Total: 591/4096 (14.428711 %)
+[32m2024-06-01 13:55:31.451[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.25.self_attn.k_proj                                   Desired/Total: 546/4096 (13.330078 %)
+[32m2024-06-01 13:55:31.452[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.25.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:31.452[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.25.self_attn.o_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:34.343[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.25.mlp.gate_proj                                      Desired/Total: 1628/4096  (39.746094 %)
+[32m2024-06-01 13:55:34.343[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.25.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:34.343[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.25.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:37.211[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.26.self_attn.q_proj                                   Desired/Total: 391/4096 (9.545898 %)
+[32m2024-06-01 13:55:39.983[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.26.self_attn.k_proj                                   Desired/Total: 361/4096 (8.813477 %)
+[32m2024-06-01 13:55:39.983[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.26.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:42.775[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.26.self_attn.o_proj                                   Desired/Total: 1632/4096 (39.843750 %)
+[32m2024-06-01 13:55:45.628[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.26.mlp.gate_proj                                      Desired/Total: 1479/4096  (36.108398 %)
+[32m2024-06-01 13:55:45.628[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.26.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:45.629[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.26.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:48.539[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.27.self_attn.q_proj                                   Desired/Total: 430/4096 (10.498047 %)
+[32m2024-06-01 13:55:51.270[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.27.self_attn.k_proj                                   Desired/Total: 334/4096 (8.154297 %)
+[32m2024-06-01 13:55:51.270[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.27.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:55:54.124[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.27.self_attn.o_proj                                   Desired/Total: 2038/4096 (49.755859 %)
+[32m2024-06-01 13:55:57.007[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.27.mlp.gate_proj                                      Desired/Total: 1453/4096  (35.473633 %)
+[32m2024-06-01 13:55:57.007[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.27.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:57.007[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.27.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:55:59.911[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.28.self_attn.q_proj                                   Desired/Total: 430/4096 (10.498047 %)
+[32m2024-06-01 13:56:02.653[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.28.self_attn.k_proj                                   Desired/Total: 359/4096 (8.764648 %)
+[32m2024-06-01 13:56:02.653[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.28.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:56:05.470[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.28.self_attn.o_proj                                   Desired/Total: 1926/4096 (47.021484 %)
+[32m2024-06-01 13:56:08.324[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.28.mlp.gate_proj                                      Desired/Total: 1442/4096  (35.205078 %)
+[32m2024-06-01 13:56:08.324[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.28.mlp.up_proj                                        Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:56:08.325[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.28.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:56:11.183[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.29.self_attn.q_proj                                   Desired/Total: 310/4096 (7.568359 %)
+[32m2024-06-01 13:56:13.900[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.29.self_attn.k_proj                                   Desired/Total: 248/4096 (6.054688 %)
+[32m2024-06-01 13:56:13.900[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.29.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:56:16.680[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.29.self_attn.o_proj                                   Desired/Total: 1740/4096 (42.480469 %)
+[32m2024-06-01 13:56:19.521[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.29.mlp.gate_proj                                      Desired/Total: 1267/4096  (30.932617 %)
+[32m2024-06-01 13:56:22.365[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.29.mlp.up_proj                                        Desired/Total: 1330/4096  (32.470703 %)
+[32m2024-06-01 13:56:22.365[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.29.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:56:25.275[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.30.self_attn.q_proj                                   Desired/Total: 337/4096 (8.227539 %)
+[32m2024-06-01 13:56:28.047[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.30.self_attn.k_proj                                   Desired/Total: 294/4096 (7.177734 %)
+[32m2024-06-01 13:56:28.048[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.30.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:56:30.833[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.30.self_attn.o_proj                                   Desired/Total: 1792/4096 (43.750000 %)
+[32m2024-06-01 13:56:33.542[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.30.mlp.gate_proj                                      Desired/Total: 84/4096  (2.050781 %)
+[32m2024-06-01 13:56:36.274[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.30.mlp.up_proj                                        Desired/Total: 38/4096  (0.927734 %)
+[32m2024-06-01 13:56:36.274[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.30.mlp.down_proj                                      Desired/Total: 4096/4096  (100.000000 %)
+[32m2024-06-01 13:56:39.221[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.31.self_attn.q_proj                                   Desired/Total: 196/4096 (4.785156 %)
+[32m2024-06-01 13:56:41.969[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.31.self_attn.k_proj                                   Desired/Total: 165/4096 (4.028320 %)
+[32m2024-06-01 13:56:41.970[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.31.self_attn.v_proj                                   Desired/Total: 4096/4096 (100.000000 %)
+[32m2024-06-01 13:56:44.722[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m63[39m - [1mlayer.31.self_attn.o_proj                                   Desired/Total: 554/4096 (13.525391 %)
+[32m2024-06-01 13:56:47.436[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.31.mlp.gate_proj                                      Desired/Total: 104/4096  (2.539062 %)
+[32m2024-06-01 13:56:50.161[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.31.mlp.up_proj                                        Desired/Total: 57/4096  (1.391602 %)
+[32m2024-06-01 13:56:53.020[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m83[39m - [1mlayer.31.mlp.down_proj                                      Desired/Total: 1971/4096  (48.120117 %)
+[32m2024-06-01 13:56:53.165[39m | [1mINFO    [22m | [36mlib.rank_reduction[39m:[36mdo_rank_reduction[39m:[36m87[39m - [1m*************** Pruning Model Completed ***************
+[32m2024-06-01 13:56:53.168[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m229[39m -
+[1mLlamaForCausalLM(
+[1m  (model): LlamaModel(
+[1m    (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+[1m    (layers): ModuleList(
+[1m      (0): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=39, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=39, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=61, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=61, bias=False)
+[1m          )
+[1m          (v_proj): LowRankLayer(
+[1m            (U): Linear(in_features=897, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=897, bias=False)
+[1m          )
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=346, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=346, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=593, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=593, bias=False)
+[1m          )
+[1m          (up_proj): LowRankLayer(
+[1m            (U): Linear(in_features=871, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=871, bias=False)
+[1m          )
+[1m          (down_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1327, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=11008, out_features=1327, bias=False)
+[1m          )
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (1): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=271, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=271, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=244, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=244, bias=False)
+[1m          )
+[1m          (v_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1323, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1323, bias=False)
+[1m          )
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=869, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=869, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=505, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=505, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (2): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=405, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=405, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=327, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=327, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1096, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1096, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1276, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1276, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (3): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=551, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=551, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=473, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=473, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=852, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=852, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1703, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1703, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (4): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=542, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=542, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=441, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=441, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1153, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1153, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1457, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1457, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (5): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=558, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=558, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=412, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=412, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1257, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1257, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=929, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=929, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (6): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=582, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=582, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=436, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=436, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1031, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1031, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=620, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=620, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (7): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=657, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=657, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=492, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=492, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1188, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1188, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=605, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=605, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (8): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=670, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=670, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=497, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=497, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1422, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1422, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=745, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=745, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (9): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=674, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=674, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=516, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=516, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1380, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1380, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=711, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=711, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (10): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=650, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=650, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=491, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=491, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1632, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1632, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=699, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=699, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (11): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=648, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=648, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=495, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=495, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1176, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1176, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=630, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=630, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): LowRankLayer(
+[1m            (U): Linear(in_features=2026, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=11008, out_features=2026, bias=False)
+[1m          )
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (12): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=669, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=669, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=509, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=509, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1487, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1487, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=726, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=726, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (13): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=630, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=630, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=484, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=484, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1468, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1468, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=697, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=697, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (14): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=621, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=621, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=439, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=439, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1654, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1654, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=714, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=714, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (15): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=533, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=533, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=406, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=406, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1762, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1762, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=746, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=746, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (16): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=486, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=486, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=362, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=362, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1782, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1782, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=703, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=703, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (17): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=501, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=501, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=367, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=367, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1659, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1659, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=652, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=652, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (18): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=472, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=472, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=370, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=370, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1784, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1784, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=792, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=792, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (19): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=457, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=457, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=329, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=329, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1827, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1827, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1000, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1000, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (20): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=403, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=403, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=332, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=332, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1480, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1480, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1026, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1026, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (21): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=437, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=437, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=394, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=394, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1879, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1879, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1190, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1190, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (22): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=456, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=456, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=429, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=429, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1205, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1205, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1239, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1239, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (23): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=539, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=539, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=499, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=499, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=2005, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=2005, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1558, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1558, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (24): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=465, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=465, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=383, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=383, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1596, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1596, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1596, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1596, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (25): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=591, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=591, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=546, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=546, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1628, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1628, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (26): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=391, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=391, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=361, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=361, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1632, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1632, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1479, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1479, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (27): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=430, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=430, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=334, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=334, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=2038, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=2038, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1453, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1453, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (28): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=430, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=430, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=359, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=359, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1926, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1926, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1442, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1442, bias=False)
+[1m          )
+[1m          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (29): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=310, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=310, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=248, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=248, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1740, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1740, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1267, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1267, bias=False)
+[1m          )
+[1m          (up_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1330, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1330, bias=False)
+[1m          )
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (30): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=337, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=337, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=294, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=294, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1792, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=1792, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=84, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=84, bias=False)
+[1m          )
+[1m          (up_proj): LowRankLayer(
+[1m            (U): Linear(in_features=38, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=38, bias=False)
+[1m          )
+[1m          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m      (31): LlamaDecoderLayer(
+[1m        (self_attn): LlamaAttention(
+[1m          (q_proj): LowRankLayer(
+[1m            (U): Linear(in_features=196, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=196, bias=False)
+[1m          )
+[1m          (k_proj): LowRankLayer(
+[1m            (U): Linear(in_features=165, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=165, bias=False)
+[1m          )
+[1m          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+[1m          (o_proj): LowRankLayer(
+[1m            (U): Linear(in_features=554, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=554, bias=False)
+[1m          )
+[1m          (rotary_emb): LlamaRotaryEmbedding()
+[1m        )
+[1m        (mlp): LlamaMLP(
+[1m          (gate_proj): LowRankLayer(
+[1m            (U): Linear(in_features=104, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=104, bias=False)
+[1m          )
+[1m          (up_proj): LowRankLayer(
+[1m            (U): Linear(in_features=57, out_features=11008, bias=False)
+[1m            (V): Linear(in_features=4096, out_features=57, bias=False)
+[1m          )
+[1m          (down_proj): LowRankLayer(
+[1m            (U): Linear(in_features=1971, out_features=4096, bias=False)
+[1m            (V): Linear(in_features=11008, out_features=1971, bias=False)
+[1m          )
+[1m          (act_fn): SiLUActivation()
+[1m        )
+[1m        (input_layernorm): LlamaRMSNorm()
+[1m        (post_attention_layernorm): LlamaRMSNorm()
+[1m      )
+[1m    )
+[1m    (norm): LlamaRMSNorm()
+[1m  )
+[1m  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+[1m)
+[32m2024-06-01 13:56:53.175[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m230[39m - [1m****** Pruning completed with Rank Reduced/Total Rank : 443879/917504 (48.379 %) ******
+[32m2024-06-01 13:56:53.180[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m234[39m - [1mTotal params AFTER Rank Reduction: 4543.67M
+[32m2024-06-01 13:56:53.181[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m235[39m - [1mTrainable params AFTER Rank Reduction: 1191.37M
+[32m2024-06-01 13:56:53.181[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl[39m:[36m23[39m - [1mEvaluating on c4 .....
+[32m2024-06-01 13:56:53.748[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 0/149
+[32m2024-06-01 13:57:21.572[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 20/149
+[32m2024-06-01 13:57:49.388[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 40/149
+[32m2024-06-01 13:58:17.209[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 60/149
+[32m2024-06-01 13:58:45.027[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 80/149
+[32m2024-06-01 13:59:12.847[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 100/149
+[32m2024-06-01 13:59:40.666[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 120/149
+[32m2024-06-01 14:00:08.489[39m | [1mINFO    [22m | [36mlib.eval[39m:[36meval_ppl_dataset[39m:[36m81[39m - [1mEvaluated samples: 140/149
+[32m2024-06-01 14:00:20.445[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m238[39m - [1mAfter Rank Reduction PPL on C4: 856.1908569335938
+[32m2024-06-01 14:00:20.446[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m240[39m - [1mTrainable Parameters are: 
+[32m2024-06-01 14:00:20.446[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.v_proj.U.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.v_proj.V.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.447[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.up_proj.U.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.up_proj.V.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.down_proj.U.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.mlp.down_proj.V.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.input_layernorm.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.0.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.448[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.v_proj.U.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.v_proj.V.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.input_layernorm.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.1.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.449[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.input_layernorm.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.2.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.450[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.input_layernorm.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.3.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.451[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.input_layernorm.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.4.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.452[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.input_layernorm.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.5.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.453[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.input_layernorm.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.6.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.454[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.input_layernorm.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.7.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.455[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.input_layernorm.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.8.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.456[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.input_layernorm.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.9.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.457[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.input_layernorm.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.10.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.458[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.mlp.down_proj.U.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.mlp.down_proj.V.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.input_layernorm.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.11.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.459[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.input_layernorm.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.12.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.460[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.input_layernorm.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.13.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.461[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.input_layernorm.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.14.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.input_layernorm.weight
+[32m2024-06-01 14:00:20.462[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.15.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.input_layernorm.weight
+[32m2024-06-01 14:00:20.463[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.16.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.input_layernorm.weight
+[32m2024-06-01 14:00:20.464[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.17.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.input_layernorm.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.18.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.465[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.input_layernorm.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.19.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.466[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.input_layernorm.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.20.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.467[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.input_layernorm.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.21.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.468[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.input_layernorm.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.22.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.469[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.input_layernorm.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.23.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.470[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.input_layernorm.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.24.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.471[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.input_layernorm.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.25.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.472[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.input_layernorm.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.26.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.473[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.input_layernorm.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.27.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.474[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.input_layernorm.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.28.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.475[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.mlp.up_proj.U.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.mlp.up_proj.V.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.input_layernorm.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.29.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.476[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.mlp.up_proj.U.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.mlp.up_proj.V.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.input_layernorm.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.30.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.q_proj.U.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.q_proj.V.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.k_proj.U.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.k_proj.V.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.o_proj.U.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.self_attn.o_proj.V.weight
+[32m2024-06-01 14:00:20.477[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.gate_proj.U.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.gate_proj.V.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.up_proj.U.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.up_proj.V.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.down_proj.U.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.mlp.down_proj.V.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.input_layernorm.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.layers.31.post_attention_layernorm.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m243[39m - [1mmodel.norm.weight
+[32m2024-06-01 14:00:20.478[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m246[39m - [1m------------------- Finetuning Log --------------------
+[32m2024-06-01 14:00:35.920[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m253[39m - [1mLoading and Shuffling data with seed 42 ...
+
+
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:05<00:00, 174.03it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [00:00<00:00, 243010.48it/s]
+Update steps:   0%|                                   | 0/10000 [00:00<?, ?it/s][32m2024-06-01 14:00:46.950[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m283[39m - [1mSaving model to /data/ajay_data/adaptive_rank_data/finetune_adaptive every 200 update steps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Update steps:   2%|▍                      | 200/10000 [01:56<1:32:14,  1.77it/s][32m2024-06-01 14:02:43.871[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m360[39m - [1mSaving model and optimizer to /data/ajay_data/adaptive_rank_data/finetune_adaptive/low-rank-continual-finetune-test, update step 200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Update steps:   4%|▉                      | 400/10000 [04:23<1:30:20,  1.77it/s][32m2024-06-01 14:05:10.333[39m | [1mINFO    [22m | [36m__main__[39m:[36mmain[39m:[36m360[39m - [1mSaving model and optimizer to /data/ajay_data/adaptive_rank_data/finetune_adaptive/low-rank-continual-finetune-test, update step 400
